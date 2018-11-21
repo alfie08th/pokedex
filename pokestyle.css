@@ -1,0 +1,440 @@
+
+*{
+  margin: 0;
+  padding: 0;
+  /* background: url('background.jpg'); */
+}
+body {
+  /* background: url('bac.jpg') no-repeat center center fixed; */
+
+  background-color: #161616;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@font-face
+{
+font-family: myFancyFont;
+src: url('blender_pro_medium.otf'),
+url('blender_pro_medium.otf');
+}
+
+.here_lies_the_nav{
+  width: 1024px;
+  background-color:#020006;
+  position:fixed;
+  overflow: hidden;
+  margin-left:120px;
+  font-family: myFancyFont;
+  top:0;
+  left:0;
+}
+.here_lies_the_nav a {
+  float: right;
+  color:gray;
+  padding: 35px 15px 15px 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.here_lies_the_nav a:hover{
+  color:#fff;
+}
+
+.left_nav{
+  width:33.33%;
+  float: left;
+}
+.left_nav a{
+  float: left;
+}
+
+/* left bar style ends here */
+
+.middle_nav{
+  width:33.33%;
+  float:left;
+  text-align: center;
+}
+
+
+
+.my_logo{
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  transition: .5s;
+  animation: falldown 30s infinite linear;
+}
+h1.head_one{
+    color: #fff;
+    width:100%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+  }
+
+.right_nav{
+  width:33.33%;
+  float:right;
+}
+
+.here_lies_background_video{
+  width: 100%;
+  height:700px;
+  background-color: #fff;
+  top:0;
+  left:0;
+}
+/* #back_video{
+  width: 100%;
+  height:100%;
+  pointer-events: none;
+} */
+
+#here_lies_pokemon{
+    width: 1024px;
+    height:610px;
+    margin: auto;
+    transition: .5s;
+}
+
+@keyframes fadeBody {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.inner_div{
+  width: 1024px;
+  height:395px;
+  margin: auto;
+  /* background-color:#fff; */
+  text-align: justify;
+
+  animation: fadeBody 2s linear;
+}
+/* Left side poke_spec */
+.left_poke{
+  width: 30%;
+  height:100%;
+  margin:auto;
+  float: left;
+  /* background-color: rgba(230,23,0, 0.5); */
+}
+
+#left_para{
+  padding:10px;
+  margin: auto;
+  margin: 50px 50px 10px 50px;
+  border-radius: 15px;
+  text-align: center;
+  font-family: monospace;
+  color: #fff;
+  background-color: rgba(0,0,0,0.5);
+}
+#left_image{
+  width:180px;
+  height:180px;
+  transform: rotate(-20deg);
+  margin: auto;
+  transition: 0.5s;
+  margin-left:30px;
+  opacity:1;
+  animation: slideInLeft 1s linear;
+  margin-bottom:-20px;
+}
+
+@keyframes slideInLeft {
+  0%{
+    opacity: 0;
+    margin-left: -300px;
+  }
+  100%{
+        opacity:1;
+        margin-left:30px;
+      }
+}
+/* middle poke_spec */
+#middle_poke{
+  width: 40%;
+  height:100%;
+  margin:auto;
+  float: left;
+  transition: 0.5s;
+  border-radius: 15px;
+  /* background-color: lightgreen; */
+  /* //020006 */
+  animation: hovered 5s linear;
+}
+/* div for 3d animation */
+.sketchfab{
+  width:305px;
+  height: 305px;
+  border-radius: 50%;
+  margin: auto;
+  margin-top:20px;
+}
+#preview_image{
+  width:100%;
+  height:100%;
+  animation: falldown 1.5s linear;
+}
+/* 3d animation */
+#poke_image{
+  	width: 100%;
+  	height: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(255, 0, 0, 0.5);
+
+}
+@keyframes falldown{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateGlow {
+  0%{
+    transform: rotate(0);
+    transform-origin: center;
+    animation-timing-function: ease-in-out;
+  }
+  50%{
+    transform: rotate(180deg);
+    transform-origin: center;
+    animation-timing-function: ease-in-out;
+  }
+  100%{
+    transform: rotate(360deg);
+    transform-origin: center;
+    animation-timing-function: ease-in-out;
+  }
+}
+/* #preview_image{
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-color: pink;
+} */
+
+/* @keyframes hovered {
+  50%{
+      box-shadow: 0px 6px rgba(0, 0, 0, 0.5);
+  }
+  100%{
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.5);
+  }
+
+}
+/* #invalidated{
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: monospace;
+} */
+/* .poke_shadow{
+  width: 100px;
+  height: 10px;
+  background-color: purple;
+  transition: 0.5s;
+  margin-left: 125px;
+  margin-top: 30px;
+  border-radius: 5px;
+  animation: movearound 2s infinite linear;
+} */
+/* //bar that moves around */
+
+/* @keyframes movearound {
+  50%{
+    margin-left:275px;
+    background-color: purple;
+  }
+  100%{
+    margin-left:125px;
+    background-color: purple;
+  }
+} */
+
+
+/* Right side poke_spec */
+.right_poke{
+  width: 30%;
+  height:100%;
+  margin:auto;
+  float: left;
+  background-color: rgba(0,0,230,0.5);
+}
+#right_para{
+  padding:10px;
+  margin: 50px;
+  text-align: center;
+  font-family: myFancyFont;
+  color: #fff;
+  border-radius:15px;
+  background-color: rgba(0,0,0,0.5);
+}
+.upper_style{
+  width: 100%;
+  height: 40%;
+  background-color: rgba(200, 0, 0, 0.5);
+}
+#upper_heading{
+  width: 100%;
+  height:20%;
+}
+#lower_icon{
+  width:100%;
+  height:20%;
+}
+#head_left{
+  width:50%;
+  height:35px;
+  float:left;
+}
+#role_icon{
+  width:50%;
+  height:35px;
+  float:left;
+}
+#head_right{
+  width:50%;
+  height:35px;
+  float:right;
+  text-align: right;
+}
+#health_icon{
+  width:50%;
+  height:35px;
+  float:right;
+  text-align: right;
+}
+#second_attribute{
+  width: 100%;
+  height:60%;
+  margin: auto;
+  text-align: center;
+}
+#ability_icon{
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: dodgerblue;
+}
+#ability_one, #ability_two, #ability_three{
+  width:18%;
+  height: 95%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #020006;
+  border: 2px solid gray;
+  transition: .2s;
+  margin: auto;
+  margin-left:20px;
+  margin-right: 10px;
+  float: left;
+}
+/* #ability_one:hover, #ability_two:hover, #ability_three:hover{
+  width:20%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #020006;
+  transition: .2s;
+  border: 2px solid gray;
+  margin: auto;
+  margin-left:35px;
+  margin-right: 20px;
+  float: left;
+} */
+
+#one, #two, #three{
+  width:40px;
+  height:40px;
+  margin-top:15px;
+}
+
+#ability_one:hover, #ability_two:hover, #ability_three:hover{
+  width:20%;
+  height: 100%;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #020006;
+  transition: .5s;
+  border: 2px solid gray;
+  margin: auto;
+  margin-left:35px;
+  margin-right: 20px;
+  float: left;
+}
+
+.button_on_top{
+  width: 150px;
+  height:40px;
+  background-color: pink;
+  border-radius: 25px;
+  outline:none;
+  margin-left: 35%;
+  font-family: monospace;
+  position: absolute;
+  text-align: center;
+  transition: 0.5s;
+  margin-top:-20px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  animation: fadeBody 2s linear;
+}
+.button_on_top:hover{
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+.second_div{
+  width: 1024px;
+  height: 115px;
+  margin: auto;
+  background-color: #FDFDFD;
+  animation: fadeBody 2s linear;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
+}
+
+/* iPhone 5SE */
+/* @media screen and (min-width: 320px) and (max-width:359px) {
+   body{
+      width: 320px;
+      font-size: 12px;
+    }
+    .here_lies_the_nav{
+      height: 50px;
+    }
+    #here_lies_pokemon{
+      width: 100%;
+      height: 320px;
+    }
+    .left_poke{
+      width: 25%;
+      height: 200px;
+    }
+    #big_poke{
+      width: 50%;
+      height: 200px;
+    }
+    .sketchfab{
+      width:100%;
+      height:auto
+    }
+    .right_poke{
+      width: 25%;
+      height: 200px;
+    }
+    .second_div{
+      background-color: purple;
+    }
+
+    .div_on_top{
+    background-color: dodgerblue;
+    text-align: center;
+    }
+ } */
