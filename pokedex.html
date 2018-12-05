@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width">
     <title>PokeDex</title>
     <link href="pokestyle.css" rel="stylesheet" type="text/css" />
-    <link rel="shortcut icon" type="image/x-icon" href="ball.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="small.png" />
   </head>
   <body>
       <div class="here_lies_the_nav">
         <div class="left_nav">
-          <a href="#">Home</a>
+          <a href="index.html">Home</a>
           <a href="#">List</a>
           <a href="#">Main</a>
           <a href="#">Load</a>
@@ -27,26 +27,28 @@
       </div>
       <div class="here_lies_background_video">
         <!-- <h1 id="my_video_heading">Welcome to Pokedex Jason</h1> -->
-        <!-- <video  id="back_video" controls autoplay loop muted>
+        <video  id="back_video" controls autoplay loop muted>
           <source src="final_video.mp4" type="video/mp4">
-        </video> -->
+        </video>
         <!-- <iframe id="back_video" src="https://www.youtube.com/embed/ezF4iNiq6v4?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
       </div>
 
       <div id="here_lies_pokemon">
         <div class="inner_div">
           <div class="left_poke">
-            <p id="left_para">Congratulations on Turning 10, it is now time for me to present you with your 3 designated Pokemon.<br><br>Check Them Out!</p>
+            <!-- <p id="left_para">Congratulations on Turning 10, it is now time for me to present you with your 3 designated Pokemon.<br><br>Check Them Out!</p> -->
             <img src="howrang.png" id="left_image">
+            <h1 id="player_name"></h1>
           </div>
           <div id="middle_poke">
               <!-- <img id="poke_image" src ="karp.jpg" onclick="randomizeThem()"> -->
               <!-- AzumraII"https://sketchfab.com/models/09326261ead84002af136fdff56f50e7/embed?autostart=1" -->
               <!-- Spheal     28b3d9b0ee5b48ca941e953cefe9bcbf  -->
               <!-- Leafeon     https://sketchfab.com/models/e64604ea410b4648bbb4cd5d47b1bddc/embed?autostart=1&amp;preload=1 -->
+              <h1 id="pokemon_name"></h1>
               <div class="sketchfab">
-                <img id="preview_image" src="ballzi.png">
-                <iframe id="poke_image" src="https://sketchfab.com/models/09326261ead84002af136fdff56f50e7/embed?autostart=1" style="display:none"></iframe>
+                <!-- <img id="preview_image" src="ballzi.png"> -->
+                <iframe id="poke_image" src="small.png"></iframe>
               </div>
           </div>
           <div class="right_poke">
@@ -57,13 +59,13 @@
               </div>
               <div id="lower_icon">
                 <!-- left here and right the bottom one-->
-               <div id="role_icon">35</div>
+               <h3 id="role_icon"></h3>
                   <!-- three hearts, any health will be percentage of over all health, e.g 95 will get 2 hearts -->
-               <div id="health_icon">45</div>
+               <h3 id="health_icon"></h3>
               </div>
               <div id="second_attribute">
-                <h1>Hello</h1>
-                <div id="attack_icon">30</div>
+                <h2 id="attack_attribute">Attack</h2>
+                <h3 id="attack_icon"></h3>
               </div>
             </div>
             <div class="lower_style">
@@ -79,13 +81,13 @@
                   <img id="three" src="shield.png">
                 </div>
               </div>
-              <h3 id="pokemon_ability" style="text-align:center;">Lightening Speed</h3><br>
-              <p id="ability_summary" style="padding:10px 20px 5px">This pokemon is so fast that you never see it coming, it just comes and that's that, and its oponent are left wondering what just happened.</p>
+              <h3 id="pokemon_ability"></h3><br>
+              <p id="ability_summary" style="padding:0px 20px 20px 20px">Every Pokemon's strengths and weaknesses in Pokemon: Let's Go are determined by six Base Stats. These Base Stats are HPADSASDS.</p>
             </div>
           </div>
         </div>
         <!-- <div class="div_on_top"><p id="loaded">Next</p></div> -->
-        <button class="button_on_top">Next</button>
+        <button class="button_on_top"><span id="next"><strong>NEXT</strong></span></button>
         <div class="second_div">
           <div class="one">
             <span id="like"><img id="love" src="like64.png" style="width:24px; height:auto; margin:15px"></span>
