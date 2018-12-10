@@ -1,0 +1,191 @@
+
+
+h1 {
+  width: 100%;
+  height:80px;
+  text-align: center;
+  font-family: myFancyFont; font-size: 50px; font-style: normal; font-variant: normal; font-weight: 700;color: #020006;}
+h2 { font-family: myFancyFont; font-size: 40px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color: #020006;}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+@font-face
+{
+font-family: myFancyFont;
+src: url('blender_pro_medium.otf'),
+url('blender_pro_medium.otf');
+}
+.main_content{
+  margin: auto;
+  margin-top: 200px;
+}
+.here_lies_the_nav{
+  width: 1024px;
+  height: 90px;
+  background-color:#020006;
+  position:fixed;
+  overflow: hidden;
+  margin-left:120px;
+  font-family: myFancyFont;
+  top:0;
+  left:0;
+}
+.here_lies_the_nav a {
+  float: right;
+  color:gray;
+  padding: 35px 15px 15px 15px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.here_lies_the_nav a:hover{
+  color:#fff;
+}
+
+.left_nav{
+  width:33.33%;
+  float: left;
+}
+.left_nav a{
+  float: left;
+}
+
+/* left bar style ends here */
+
+.middle_nav{
+  width:33.33%;
+  float:left;
+  text-align: center;
+}
+
+.my_logo{
+  width: 30px;
+  height: 30px;
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
+  transition: .5s;
+  animation: falldown 30s infinite linear;
+}
+@keyframes falldown{
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+h1.head_one{
+    color: #fff;
+    width:100%;
+    text-align: center;
+    font-family: monospace;
+    font-size: 18px;
+  }
+
+.right_nav{
+  width:33.33%;
+  float:right;
+}
+
+.players{
+  width: 100%;
+  height:100px;
+  text-align: center;
+  position: relative;
+}
+#player_carlos{
+height: 150px;
+width: 100px;
+margin: 25px;
+display: inline-block; border-radius:5px;
+}
+
+#player_mikias{
+height: 150px;
+width: 100px;
+margin: 25px;
+display: inline-block; border-radius:5px;
+
+}
+
+#player_tyler{
+height: 150px;
+width: 100px;
+margin: 25px;
+display: inline-block; border-radius:5px;
+}
+
+#player_alfie{
+height: 150px;
+width: 100px;
+margin: 25px;
+display: inline-block; border-radius:5px;
+}
+
+#player_neeya{
+height: 150px;
+width: 100px;
+margin: 25px;
+display: inline-block; border-radius:5px;
+}
+
+.carlos_image{
+background-color: lightblue;
+height: 100px;
+width: 100px;
+display: inline-block; border-radius:5px;
+box-shadow: 5px 5px #00000099;
+}
+
+.mikias_image{
+background-color: red;
+height: 100px;
+width: 100px;
+display: inline-block; border-radius:5px;
+box-shadow: 5px 5px #00000099;
+
+}
+
+.tyler_image{
+background-color: lightgreen;
+height: 100px;
+width: 100px;
+display: inline-block; border-radius:5px;
+box-shadow: 5px 5px #00000099;
+}
+
+.alfie_image{
+background-color: gold;
+height: 100px;
+width: 100px;
+display: inline-block; border-radius:5px;
+box-shadow: 5px 5px #00000099;
+}
+
+.neeya_image{
+background-color: pink;
+height: 100px;
+width: 100px;
+display: inline-block; border-radius:5px;
+box-shadow: 5px 5px #00000099;
+}
+.neeya_image:hover, .carlos_image:hover, .tyler_image:hover, .alfie_image:hover, .mikias_image:hover{
+  transition: .5s;
+  width:110px;
+  height: 110px;
+  background-color: dodgerblue;
+}
+.name_alfie, .name_neeya, .name_tyler, .name_carlos, .name_mikias{
+  margin-top: 15px;
+  font-family: Roboto;
+}
+/* .player_name{
+  width: 100%;
+  height:100px;
+  text-align: center;
+}
+
+.mikias_name, .neeya_name, .carlos_name, .tyler_name, .alfie_name{
+  display: inline-block; border-radius:5px;
+} */
