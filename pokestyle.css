@@ -136,7 +136,6 @@ h1.head_one{
   width:350px;
   height:350px;
   margin: auto;
-  transform: rotate(-20deg);
   transition: 0.5s;
   margin-left:-50px;
   opacity:1;

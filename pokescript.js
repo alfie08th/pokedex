@@ -4,8 +4,9 @@
 
 // //
 // console.log(location.hash);
-//
-// var selectedPlayer = location.hash;
+
+var selectedPlayer = location.hash;
+selectedPlayer = selectedPlayer.replace('#', "");
 // My background Pokemon Video When the page loads
 function runvideoOnPokedex(){
 window.onload = function myFunction() {
@@ -23,8 +24,26 @@ let potential;
 let result =[];
 let name;
 
-let raysUrl = ["http://fizal.me/pokeapi/api/v2/name/azumarill.json","http://fizal.me/pokeapi/api/v2/name/spheal.json", "http://fizal.me/pokeapi/api/v2/name/leafeon.json"] ;
-let rayPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif","http://play.pokemonshowdown.com/sprites/xyani/spheal.gif", "http://play.pokemonshowdown.com/sprites/xyani/leafeon.gif"];
+let carlosUrl = ["https://fizal.me/pokeapi/api/v2/id/6.json","https://fizal.me/pokeapi/api/v2/id/25.json", "https://fizal.me/pokeapi/api/v2/id/395.json"] ;
+let carlosPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/charizard.gif","http://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "http://play.pokemonshowdown.com/sprites/xyani/empoleon.gif"];
+let carlosTrainerImage = "carlos.png";
+
+let mikiasUrl = ["https://fizal.me/pokeapi/api/v2/id/25.json", "https://fizal.me/pokeapi/api/v2/id/14.json", "https://fizal.me/pokeapi/api/v2/id/27.json"];
+let mikiasPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "http://play.pokemonshowdown.com/sprites/xyani/kakuna.gif", "http://play.pokemonshowdown.com/sprites/xyani/sandshrew.gif"];
+let mikiasTrainerImage = "makias.png";//Trainer name is Mikias.
+
+let neeyasUrl = ["http://fizal.me/pokeapi/api/v2/name/lapras.json","http://fizal.me/pokeapi/api/v2/name/bellossom.json", "http://fizal.me/pokeapi/api/v2/name/luxio.json"] ;
+let neeyaPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/lapras.gif", "http://play.pokemonshowdown.com/sprites/xyani/bellossom.gif", "http://play.pokemonshowdown.com/sprites/xyani/luxio.gif"];
+let neeyaTrainerImage = "neeya.png";
+
+
+let tylersUrl = ["http://fizal.me/pokeapi/api/v2/name/mewtwo.json", "http://fizal.me/pokeapi/api/v2/name/rayquaza.json","http://fizal.me/pokeapi/api/v2/name/dialga.json"] ;
+let tylerPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/mewtwo.gif", "http://play.pokemonshowdown.com/sprites/xyani/rayquaza.gif", "http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"];
+let tylerTrainerImage = "tyler.png";
+
+let alfiesUrl = ["http://fizal.me/pokeapi/api/v2/name/azumarill.json","http://fizal.me/pokeapi/api/v2/name/spheal.json", "http://fizal.me/pokeapi/api/v2/name/leafeon.json"] ;
+let alfiesPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif","http://play.pokemonshowdown.com/sprites/xyani/spheal.gif", "http://play.pokemonshowdown.com/sprites/xyani/leafeon.gif"];
+let alfiesTrainerImage = "howrang.png";
 
 // let pokeball = document.getElementById('preview_image');
 let pokeballSketch = document.getElementById('poke_image');
@@ -55,6 +74,7 @@ function fetchPokemonData(thaturl) {
 //  "fizal.me/pokeapi/api/v2/name/"+name+".json/";
 
   /** Method to display Pokemon Data **/
+  let trainerImage = document.getElementById('left_image');
   let ability_lists = ["This pokemon is so fast that you never see it coming, it just comes and that's that, and its oponent are left wondering what just happened.", "The most Abilities any species or form has is three: two normal Abilities and one Hidden Ability. In most wild Pokémon encounters, it'll be non-Hidden Abilities.", "There are three ways for Pokémon to change Abilities in a permanent manner. One way is if the Pokémon has different forms with different Abilities."];
   let sketchfab = ["https://sketchfab.com/models/09326261ead84002af136fdff56f50e7/embed?autostart=1", "https://sketchfab.com/models/28b3d9b0ee5b48ca941e953cefe9bcbf/embed?autostart=1&amp;preload=1","https://sketchfab.com/models/e64604ea410b4648bbb4cd5d47b1bddc/embed?autostart=1&amp;preload=1"];
   let thatPokemonName = document.getElementById('pokemon_name');
@@ -131,13 +151,26 @@ class Pokemon{
       // displayHP.style.animation="heartbeat .5s linear";
 
       //assigning url to the Pokemon Image
-      pokeballSketch.src = rayPokeImage[rand];
-
-      console.log(this.name);
-      console.log(this.hpStat);
-      console.log(this.defense);
-      console.log(this.attackStat);
-      console.log(sketchUrl+":\t"+mikiasPokeImage[sketchUrl]);
+      if(selectedPlayer==='neeya'){
+     pokeballSketch.src = neeyaPokeImage[rand];
+     }else if(selectedPlayer==='mikias'){
+     pokeballSketch.src = mikiasPokeImage[rand];
+     }else if(selectedPlayer==='carlos'){
+     pokeballSketch.src = carlosPokeImage[rand];
+     }else if(selectedPlayer==='tyler'){
+     pokeballSketch.src = tylerPokeImage[rand];
+    }else if(selectedPlayer==='alfie'){
+     pokeballSketch.src = alfiesPokeImage[rand];
+     }else{
+       console.log(selectedPlayer, '\terror');
+     }
+     // }
+     //
+     //  console.log(this.name);
+     //  console.log(this.hpStat);
+     //  console.log(this.defense);
+     //  console.log(this.attackStat);
+     //  console.log(sketchUrl+":\t"+mikiasPokeImage[sketchUrl]);
     }
 }
 
@@ -172,7 +205,20 @@ class Trainer{
     }
     sketchRand = rand;
     console.log("get:\t",rand);
-    fetchPokemonData(raysUrl[rand]);
+
+    if(selectedPlayer==='neeya'){
+   fetchPokemonData(neeyasUrl[rand]);
+   }else if(selectedPlayer==='mikias'){
+  fetchPokemonData(mikiasUrl[rand]);
+   }else if(selectedPlayer==='carlos'){
+   fetchPokemonData(carlosUrl[rand]);
+   }else if(selectedPlayer==='tyler'){
+   fetchPokemonData(tylersUrl[rand]);
+ }else if(selectedPlayer==='alfie'){
+   fetchPokemonData(alfiesUrl[rand]);
+   }else{
+     console.log('Error fetching '+ selectedPlayer + "'s Data");
+   }
     }
 }
 
@@ -189,17 +235,31 @@ function showTrainerData(trainerName){
   pokemonTrainerName.innerHTML = trainerName;
 }
 //calling the function to add more pokemon data to your trainer class
-var selectedPlayer = 'ray'
+// var selectedPlayer = 'ray'
 window.load = showTrainerData(selectedPlayer);
 
 //function to move to next Pokemon and its abilities
 function gotoNextPokemon(){
   trainer.get();// here the method will fetch and assign the pokemon data to its designated element
   function runThis(){
-  // thatPokemon.display(sketchRand);
+  thatPokemon.display(sketchRand);
   }
   setTimeout(runThis, 500);
 }
 // When clicked on this button new pokemon shows up
+
+if(selectedPlayer==="neeya"){
+    trainerImage.src = neeyaTrainerImage;
+}else if(selectedPlayer==="mikias"){
+  trainerImage.src = mikiasTrainerImage;
+}else if(selectedPlayer==="carlos"){
+  trainerImage.src = carlosTrainerImage;
+}else if(selectedPlayer==="tyler"){
+  trainerImage.src = tylerTrainerImage;
+}else if(selectedPlayer==="alfie"){
+  trainerImage.src = alfiesTrainerImage;
+  trainerImage.style.transform = "rotate(-20deg)";
+}
+
 let myNextButton = document.querySelector('.button_on_top');
 myNextButton.addEventListener('click', gotoNextPokemon);
