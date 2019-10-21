@@ -9,12 +9,12 @@ var selectedPlayer = location.hash;
 selectedPlayer = selectedPlayer.replace('#', "");
 // My background Pokemon Video When the page loads
 function runvideoOnPokedex(){
-window.onload = function myFunction() {
-  var vid = document.getElementById("back_video");
-  vid.autoplay = true;
-  vid.load;
-  // vid.controls = true;
-};
+// window.onload = function myFunction() {
+//   var vid = document.getElementById("back_video");
+//   vid.autoplay = true;
+//   vid.load;
+//   // vid.controls = true;
+// };
 }
 
 let hp;
