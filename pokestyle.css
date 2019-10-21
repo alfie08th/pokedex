@@ -66,6 +66,11 @@ body {
   transition: .5s;
   animation: falldown 30s infinite linear;
 }
+
+#home-anch{
+color: white;
+text-decoration: none;
+}
 @keyframes falldown{
   100%{
     transform: rotate(360deg);
