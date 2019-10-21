@@ -25,24 +25,24 @@ let result =[];
 let name;
 
 let carlosUrl = ["https://fizal.me/pokeapi/api/v2/id/6.json","https://fizal.me/pokeapi/api/v2/id/25.json", "https://fizal.me/pokeapi/api/v2/id/395.json"] ;
-let carlosPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/charizard.gif","http://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "http://play.pokemonshowdown.com/sprites/xyani/empoleon.gif"];
+let carlosPokeImage = ["https://play.pokemonshowdown.com/sprites/xyani/charizard.gif","https://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "https://play.pokemonshowdown.com/sprites/xyani/empoleon.gif"];
 let carlosTrainerImage = "carlos.png";
 
 let mikiasUrl = ["https://fizal.me/pokeapi/api/v2/id/25.json", "https://fizal.me/pokeapi/api/v2/id/14.json", "https://fizal.me/pokeapi/api/v2/id/27.json"];
-let mikiasPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "http://play.pokemonshowdown.com/sprites/xyani/kakuna.gif", "http://play.pokemonshowdown.com/sprites/xyani/sandshrew.gif"];
+let mikiasPokeImage = ["https://play.pokemonshowdown.com/sprites/xyani/pikachu.gif", "https://play.pokemonshowdown.com/sprites/xyani/kakuna.gif", "https://play.pokemonshowdown.com/sprites/xyani/sandshrew.gif"];
 let mikiasTrainerImage = "makias.png";//Trainer name is Mikias.
 
-let neeyasUrl = ["http://fizal.me/pokeapi/api/v2/name/lapras.json","http://fizal.me/pokeapi/api/v2/name/bellossom.json", "http://fizal.me/pokeapi/api/v2/name/luxio.json"] ;
-let neeyaPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/lapras.gif", "http://play.pokemonshowdown.com/sprites/xyani/bellossom.gif", "http://play.pokemonshowdown.com/sprites/xyani/luxio.gif"];
+let neeyasUrl = ["https://fizal.me/pokeapi/api/v2/name/lapras.json","https://fizal.me/pokeapi/api/v2/name/bellossom.json", "https://fizal.me/pokeapi/api/v2/name/luxio.json"] ;
+let neeyaPokeImage = ["https://play.pokemonshowdown.com/sprites/xyani/lapras.gif", "https://play.pokemonshowdown.com/sprites/xyani/bellossom.gif", "https://play.pokemonshowdown.com/sprites/xyani/luxio.gif"];
 let neeyaTrainerImage = "neeya.png";
 
 
-let tylersUrl = ["http://fizal.me/pokeapi/api/v2/name/mewtwo.json", "http://fizal.me/pokeapi/api/v2/name/rayquaza.json","http://fizal.me/pokeapi/api/v2/name/dialga.json"] ;
-let tylerPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/mewtwo.gif", "http://play.pokemonshowdown.com/sprites/xyani/rayquaza.gif", "http://play.pokemonshowdown.com/sprites/xyani/dialga.gif"];
+let tylersUrl = ["https://fizal.me/pokeapi/api/v2/name/mewtwo.json", "https://fizal.me/pokeapi/api/v2/name/rayquaza.json","https://fizal.me/pokeapi/api/v2/name/dialga.json"] ;
+let tylerPokeImage = ["https://play.pokemonshowdown.com/sprites/xyani/mewtwo.gif", "https://play.pokemonshowdown.com/sprites/xyani/rayquaza.gif", "https://play.pokemonshowdown.com/sprites/xyani/dialga.gif"];
 let tylerTrainerImage = "tyler.png";
 
-let alfiesUrl = ["http://fizal.me/pokeapi/api/v2/name/azumarill.json","http://fizal.me/pokeapi/api/v2/name/spheal.json", "http://fizal.me/pokeapi/api/v2/name/leafeon.json"] ;
-let alfiesPokeImage = ["http://play.pokemonshowdown.com/sprites/xyani/azumarill.gif","http://play.pokemonshowdown.com/sprites/xyani/spheal.gif", "http://play.pokemonshowdown.com/sprites/xyani/leafeon.gif"];
+let alfiesUrl = ["https://fizal.me/pokeapi/api/v2/name/azumarill.json","https://fizal.me/pokeapi/api/v2/name/spheal.json", "https://fizal.me/pokeapi/api/v2/name/leafeon.json"] ;
+let alfiesPokeImage = ["https://play.pokemonshowdown.com/sprites/xyani/azumarill.gif","https://play.pokemonshowdown.com/sprites/xyani/spheal.gif", "https://play.pokemonshowdown.com/sprites/xyani/leafeon.gif"];
 let alfiesTrainerImage = "howrang.png";
 
 // let pokeball = document.getElementById('preview_image');
