@@ -21,14 +21,14 @@ body {
 
 
 .here_lies_the_nav{
-  width: 1024px;
+  width: 75%;
+  height: 90px;
   background-color:#020006;
   position:fixed;
   overflow: hidden;
-  margin-left:120px;
+  left: 50%;
+  margin-left: -37.5%;  
   font-family: myFancyFont;
-  top:0;
-  left:0;
 }
 .here_lies_the_nav a {
   float: right;
