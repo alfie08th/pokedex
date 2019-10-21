@@ -18,9 +18,6 @@ font-family: myFancyFont;
 src: url('blender_pro_medium.otf'),
 url('blender_pro_medium.otf');
 }
-.main_content{
-  margin: auto;
-}
 .here_lies_the_nav{
   width: 75%;
   height: 90px;
@@ -30,7 +27,6 @@ url('blender_pro_medium.otf');
   left: 50%;
   margin-left: -37.5%;  
   font-family: myFancyFont;
-  margin-bottom: 10%;
 }
 .here_lies_the_nav a {
   float: right;
@@ -72,6 +68,11 @@ url('blender_pro_medium.otf');
   100%{
     transform: rotate(360deg);
   }
+}
+
+.main_content{
+  top:15%;
+  
 }
 
 h1.head_one{
