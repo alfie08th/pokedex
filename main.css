@@ -20,7 +20,6 @@ url('blender_pro_medium.otf');
 }
 .main_content{
   margin: auto;
-  margin-top: 200px;
 }
 .here_lies_the_nav{
   width: 75%;
@@ -31,6 +30,7 @@ url('blender_pro_medium.otf');
   left: 50%;
   margin-left: -37.5%;  
   font-family: myFancyFont;
+  margin-bottom: 10%;
 }
 .here_lies_the_nav a {
   float: right;
