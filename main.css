@@ -25,6 +25,7 @@ url('blender_pro_medium.otf');
   position:fixed;
   overflow: hidden;
   left: 50%;
+  top:0;
   margin-left: -37.5%;  
   font-family: myFancyFont;
 }
@@ -71,8 +72,6 @@ url('blender_pro_medium.otf');
 }
 
 .main_content{
-  top:15%;
-  
 }
 
 h1.head_one{
