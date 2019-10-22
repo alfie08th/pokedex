@@ -91,7 +91,7 @@ h1.head_one{
 }
 
 .here_lies_background_video{
-  width: 100%;
+  width: 100vh;
   height:700px;
   background-color: #fff;
   top:0;
@@ -104,7 +104,7 @@ h1.head_one{
 }
 
 #here_lies_pokemon{
-    width: 100%;
+    width: 100vh;
     height:610px;
     margin: auto;
     transition: .5s;
@@ -454,7 +454,7 @@ h1.head_one{
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
 }
 .second_div{
-  width: 100%;
+  width: 100vh;
   height: 115px;
   margin: auto;
   background-color: #FDFDFD;
