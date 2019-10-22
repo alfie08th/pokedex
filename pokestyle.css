@@ -104,7 +104,7 @@ h1.head_one{
 }
 
 #here_lies_pokemon{
-    width: 1024px;
+    width: 100%;
     height:610px;
     margin: auto;
     transition: .5s;
@@ -120,7 +120,7 @@ h1.head_one{
   }
 }
 .inner_div{
-  width: 1024px;
+  width: 100%;
   height:395px;
   margin: auto;
   /* background-color:#fff; */
@@ -454,7 +454,7 @@ h1.head_one{
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
 }
 .second_div{
-  width: 1024px;
+  width: 100%;
   height: 115px;
   margin: auto;
   background-color: #FDFDFD;
