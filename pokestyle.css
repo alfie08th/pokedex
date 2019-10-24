@@ -16,9 +16,11 @@ body {
   /* background: url('bac.jpg') no-repeat center center fixed; */
 
    /**#161616;**/
+  background: red;
   font-family: myFancyFont;
 }
 
+/* nav style begins here */
 
 .here_lies_the_nav{
   width: 75%;
@@ -90,19 +92,27 @@ h1.head_one{
   float:right;
 }
 
+/*nav style ends here*/
+
+
+/* background pokemon video starts here */
+
 .here_lies_background_video{
   background-color: #fff;
   top:0;
   left:0;
 }
 #back_video{
-  width: 100%;
   height:100%;
   pointer-events: none;
 }
 
+/* background pokemon video ends here */
+
+
+/* pokemon content styling starts here */
+
 #here_lies_pokemon{
-    width: 100vh;
     height:610px;
     margin: auto;
     transition: .5s;
@@ -121,40 +131,56 @@ h1.head_one{
   width: 100%;
   height:395px;
   margin: auto;
-  /* background-color:#fff; */
+  position: relative;
   text-align: justify;
-
   animation: fadeBody 2s linear;
 }
-/* Left side poke_spec */
-.left_poke{
-  width: 30%;
-  height:100%;
-  margin:auto;
-  float: left;
-  /* background-color: rgba(230,23,0, 0.5); */
-}
+  .left_poke{
+    width: 30%;
+    height:100%;
+    margin:auto;
+    float: left;
+    background-color: rgba(230,23,0, 0.5); 
+  }
 
 #left_image{
-  width:350px;
-  height:350px;
-  margin: auto;
-  transition: 0.5s;
-  margin-left:-50px;
-  opacity:1;
-  animation: slideInLeft 1s linear;
-  margin-bottom:-20px;
-}
-@keyframes slideInLeft {
-  0%{
-    opacity: 0;
-    margin-left: -300px;
+    width:100%;
+    transition: 0.5s;
+    opacity:1;
+    padding-top: 15%;
+    animation: slideInLeft 1s linear;
+    /*margin-bottom:-20px;*/
   }
-  100%{
-        opacity:1;
-        margin-left:-50px;
-      }
-}
+  @keyframes slideInLeft {
+    0%{
+      opacity: 0;
+      margin-left: -300px;
+    }
+    100%{
+          opacity:1;
+          margin-left:-50px;
+        }
+  }
+  #player_name{
+    color: #fff;
+    font-weight: bold;
+    width: 50%;
+    font-size: 50px;
+    margin: 0 auto;
+    animation: showMessage .5s linear;
+    text-shadow: 2px .2px rgba(255, 255, 255, 0.5);
+  }
+  @keyframes showMessage{
+    0%{
+      margin-top: 50px;
+      opacity: 0;
+    }
+    100%{
+      margin-top: 0px;
+      opacity: 1;
+    }
+  }
+
 /* middle poke_spec */
 #middle_poke{
   width: 40%;
@@ -163,117 +189,52 @@ h1.head_one{
   float: left;
   transition: 0.5s;
   border-radius: 15px;
-  /* background-color: lightgreen; */
-  /* //020006 */
+  background-color: lightgreen; 
   animation: hovered 5s linear;
 }
 
-#player_name{
-  color: #fff;
-  font-weight: bold;
-  font-size: 50px;
-  margin: 0px 0px 0px 150px;
-  position: absolute;
-  animation: showMessage .5s linear;
-  text-shadow: 2px .2px rgba(255, 255, 255, 0.5);
-}
-@keyframes showMessage{
-  0%{
-    margin-top: 50px;
-    opacity: 0;
+  
+  /*  styling for pokemon name*/
+  #pokemon_name{
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing:2px;
+    text-align: center;
+    font-size: 56px;
+    margin: 20% 0 15% 0;
+
+    text-shadow: 2px 2px #fff;
   }
-  100%{
-    margin-top: 0px;
-    opacity: 1;
-  }
-}
-/*  styling for pokemon name*/
-#pokemon_name{
-  font-style: italic;
-  font-weight: bold;
-  letter-spacing:2px;
-  text-align: center;
-  font-size: 56px;
-  text-shadow: 2px 2px #fff;
-}
-/* div for 3d animation */
-.sketchfab{
-  width:305px;
-  height: 305px;
-  text-align: center;
-	overflow:hidden;
-  align-items: center;
-  border: 0px;
-}
-/* 3d animation */
-#poke_image{
-  	width: 100%;
-  	height: 100%;
-    outline: none;
+  /* div for 3d animation */
+  .sketchfab{
+    width:50% important;
+    height: 305px;
+    text-align: center;
+    align-items: center;
     border: 0px;
-    margin: 100px 0px 0px 150px;
-}
-@keyframes rotateGlow {
-  0%{
-    transform: rotate(0);
-    transform-origin: center;
-    animation-timing-function: ease-in-out;
   }
-  50%{
-    transform: rotate(180deg);
-    transform-origin: center;
-    animation-timing-function: ease-in-out;
-  }
-  100%{
-    transform: rotate(360deg);
-    transform-origin: center;
-    animation-timing-function: ease-in-out;
-  }
-}
-/* #preview_image{
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  background-color: pink;
-} */
-
-/* @keyframes hovered {
-  50%{
-      box-shadow: 0px 6px rgba(0, 0, 0, 0.5);
-  }
-  100%{
-    box-shadow: 0px 0px rgba(0, 0, 0, 0.5);
+  /* 3d animation */
+  #poke_image{
+  
   }
 
-}
-/* #invalidated{
-  margin-left: 20px;
-  font-size: 12px;
-  font-weight: 600;
-  font-family: monospace;
-} */
-/* .poke_shadow{
-  width: 100px;
-  height: 10px;
-  background-color: purple;
-  transition: 0.5s;
-  margin-left: 125px;
-  margin-top: 30px;
-  border-radius: 5px;
-  animation: movearound 2s infinite linear;
-} */
-/* //bar that moves around */
-
-/* @keyframes movearound {
-  50%{
-    margin-left:275px;
-    background-color: purple;
+  @keyframes rotateGlow {
+    0%{
+      transform: rotate(0);
+      transform-origin: center;
+      animation-timing-function: ease-in-out;
+    }
+    50%{
+      transform: rotate(180deg);
+      transform-origin: center;
+      animation-timing-function: ease-in-out;
+    }
+    100%{
+      transform: rotate(360deg);
+      transform-origin: center;
+      animation-timing-function: ease-in-out;
+    }
   }
-  100%{
-    margin-left:125px;
-    background-color: purple;
-  }
-} */
 
 
 /* Right side poke_spec */
@@ -286,173 +247,156 @@ h1.head_one{
   color: white;
   background-color: rgba(0,26,51,1);
 }
-#right_para{
-  padding:10px;
-  margin: 50px;
-  text-align: center;
-  font-family: myFancyFont;
-  color: #fff;
-  border-radius:15px;
-  background-color: rgba(0,0,0,0.5);
-}
-.upper_style, .lower_style{
-  width: 100%;
-  height: 40%;
-}
-
-#upper_heading{
-  width: 100%;
-  height:20%;
-  color: #3ac2ff;
-}
-#lower_icon{
-  width:100%;
-  height:20%;
-  transition: .5s;
-}
-#head_left{
-  width:40%;
-  height:35px;
-  float:left;
-  padding: 20px 0px 0px 20px;
-}
-#role_icon{
-  width:40%;
-  height:25px;
-  float:left;
-  padding: 5px 0px 0px 20px;
-  transition: .5s;
-}
-#head_right{
-  width:40%;
-  height:35px;
-  float:right;
-  padding: 20px 20px 0px 0px;
-  text-align: right;
-}
-#health_icon{
-  width:40%;
-  height:25px;
-  float:right;
-  text-align: right;
-  padding: 5px 40px 0px 0px;
-  transition: .5s;
-}
-#second_attribute{
-  width: 100%;
-  height:70%;
-  margin: auto;
-  text-align: center;
-}
-#attack_attribute{
-  margin: 0px 0px 10px 0px;
-  color: #3ac2ff;
-}
-#lower_style_heading{
-  margin: 0px 0px 5px 20px;
-  color: #3ac2ff;
-}
-
-@keyframes heartbeat {
-  100%{
-    font-size:28px;
+  #right_para{
+    padding:10px;
+    margin: 50px;
+    text-align: center;
+    font-family: myFancyFont;
+    color: #fff;
+    border-radius:15px;
+    background-color: rgba(0,0,0,0.5);
   }
-}
-
-#ability_icon{
-  width: 100%;
-  height: 50px;
-  margin: 0px 0px 0px 25px;
-  text-align: center;
-}
-#ability_one, #ability_two, #ability_three{
-  width:15.5%;
-  height: 95%;
-  border-radius: 50%;
-  text-align: center;
-  background-color: #020006;
-  border: 2px solid gray;
-  transition: .2s;
-  margin-left:20px;
-  margin-right: 10px;
-  float: left;
-}
-/* #ability_one:hover, #ability_two:hover, #ability_three:hover{
-  width:20%;
-  height: 100%;
-  border-radius: 50%;
-  text-align: center;
-  background-color: #020006;
-  transition: .2s;
-  border: 2px solid gray;
-  margin: auto;
-  margin-left:35px;
-  margin-right: 20px;
-  float: left;
-} */
-
-#ability_one:hover, #ability_two:hover, #ability_three:hover{
-  width:16.5%;
-  height: 100%;
-}
-#ability_one:hover{
-  margin-left: 5px;
-}
-#ability_two:hover{
-  margin-top: -15px;
-}
-#ability_three:hover{
-  margin-left: 25px;
-}
-#one, #two, #three{
-  width:30px;
-  height:30px;
-  margin-top:15px;
-}
-#pokemon_ability{
-  text-align:center;
-  margin-top:15px;
-}
-#ability_summary{
-  transition: .5s;
-}
-@keyframes comeSlow {
-  0%{
-    opacity: 0;
+  .upper_style, .lower_style{
+    width: 100%;
+    height: 40%;
   }
-  100%{
-    opacity: 1;
+
+  #upper_heading{
+    width: 100%;
+    height:20%;
+    color: #3ac2ff;
   }
-}
+  #lower_icon{
+    width:100%;
+    height:20%;
+    transition: .5s;
+  }
+  #head_left{
+    width:40%;
+    height:35px;
+    float:left;
+    padding: 20px 0px 0px 20px;
+  }
+  #role_icon{
+    width:40%;
+    height:25px;
+    float:left;
+    padding: 5px 0px 0px 20px;
+    transition: .5s;
+  }
+  #head_right{
+    width:40%;
+    height:35px;
+    float:right;
+    padding: 20px 20px 0px 0px;
+    text-align: right;
+  }
+  #health_icon{
+    width:40%;
+    height:25px;
+    float:right;
+    text-align: right;
+    padding: 5px 40px 0px 0px;
+    transition: .5s;
+  }
+  #second_attribute{
+    width: 100%;
+    height:70%;
+    margin: auto;
+    text-align: center;
+  }
+  #attack_attribute{
+    margin: 0px 0px 10px 0px;
+    color: #3ac2ff;
+  }
+  #lower_style_heading{
+    margin: 0px 0px 5px 20px;
+    color: #3ac2ff;
+  }
+
+  @keyframes heartbeat {
+    100%{
+      font-size:28px;
+    }
+  }
+
+  #ability_icon{
+    width: 100%;
+    height: 50px;
+    margin: 0px 0px 0px 25px;
+    text-align: center;
+  }
+  #ability_one, #ability_two, #ability_three{
+    width:15.5%;
+    height: 95%;
+    border-radius: 50%;
+    text-align: center;
+    background-color: #020006;
+    border: 2px solid gray;
+    transition: .2s;
+    margin-left:20px;
+    margin-right: 10px;
+    float: left;
+  }
+
+  #ability_one:hover, #ability_two:hover, #ability_three:hover{
+    width:16.5%;
+    height: 100%;
+  }
+  #ability_one:hover{
+    margin-left: 5px;
+  }
+  #ability_two:hover{
+    margin-top: -15px;
+  }
+  #ability_three:hover{
+    margin-left: 25px;
+  }
+  #one, #two, #three{
+    width:30px;
+    height:30px;
+    margin-top:15px;
+  }
+  #pokemon_ability{
+    text-align:center;
+    margin-top:15px;
+  }
+  #ability_summary{
+    transition: .5s;
+  }
+  @keyframes comeSlow {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
 .button_on_top{
   width: 150px;
   height:40px;
-  display: inline-block;
-  overflow: hidden;
   z-index: 1;
-  -moz-transform: skewX(-10deg);
-  -ms-transform: skewX(-10deg);
-  -webkit-transform: skewX(-10deg);
-  transform: skewX(-10deg);
   background-color: #ffae1a;
   border-radius: 5px;
   outline:none;
-  margin-left: 35%;
   font-family: monospace;
   font-size: 14px;
   position: absolute;
   text-align: center;
-  transition: 0.5s;
+  transform: skewX(-10deg) translate(-50%, -50%); 
+  left: 50%;
   margin-top:-20px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
+  transition: .3s;
   animation: fadeBody 2s linear;
 }
 
 .button_on_top:hover{
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
+  transition: .3s;
 }
+
 .second_div{
-  width: 100vh;
   height: 115px;
   margin: auto;
   background-color: #FDFDFD;

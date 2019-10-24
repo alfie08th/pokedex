@@ -1,21 +1,28 @@
 //this is for index.html page, logic to select particular trainer that the user wants to select.
 
-// if(location.index.html){
-
-// //
-// console.log(location.hash);
-
 var selectedPlayer = location.hash;
 selectedPlayer = selectedPlayer.replace('#', "");
 // My background Pokemon Video When the page loads
 function runvideoOnPokedex(){
-// window.onload = function myFunction() {
-//   var vid = document.getElementById("back_video");
-//   vid.autoplay = true;
-//   vid.load;
-//   // vid.controls = true;
-// };
+
 }
+
+let hlbv = document.getElementsByClassName('here_lies_background_video');
+
+let hlpm = document.getElementById('here_lies_pokemon');
+let indiv = document.getElementsByClassName('inner_div');
+let secdiv = document.getElementsByClassName('second_div');
+
+let bv = document.getElementById('back_video');
+
+window.addEventListener("resize", function(){
+  let screenSize = window.innerWidth + "px";
+  hlbv[0].style.width = screenSize;
+  hlpm.style.width = screenSize;
+})
+bv.style.width = "100%";
+indiv[0].style.width = "100%";
+secdiv[0].style.width = "100%";
 
 let hp;
 let defense;
@@ -60,10 +67,11 @@ function fetchPokemonData(thaturl) {
          thatPokemon.display(sketchRand);
          trainer.add(thatPokemon); // add new Pokemon, if want to add more Pokemon, In this everyone has 3 Pokemon.
          trainer.all();
-         console.log("fpd:\tname:\t"+name);
-         console.log("fpd:\tdefense:\t"+defense);
-         console.log("fpd:\tattack:\t"+attack);
-         console.log("fpd:\tpotential:\t",potential);
+
+         // console.log("fpd:\tname:\t"+name);
+         // console.log("fpd:\tdefense:\t"+defense);
+         // console.log("fpd:\tattack:\t"+attack);
+         // console.log("fpd:\tpotential:\t",potential);
 
       })
       .catch(function (error) {
@@ -108,7 +116,7 @@ class Pokemon{
       //console.log("display:\tpotential:\t"+potential.showValue);
       for(var i = 0; i<potential.length; i++){
         result[i] = potential[i].ability.name;
-        console.log(i+"\t"+result[i]);
+        // console.log(i+"\t"+result[i]);
       }
 
         /** Animation 'hover' Starts here
@@ -204,7 +212,7 @@ class Trainer{
       rand = 0;
     }
     sketchRand = rand;
-    console.log("get:\t",rand);
+    // console.log("get:\t",rand);
 
     if(selectedPlayer==='neeya'){
    fetchPokemonData(neeyasUrl[rand]);
@@ -242,7 +250,7 @@ window.load = showTrainerData(selectedPlayer);
 function gotoNextPokemon(){
   trainer.get();// here the method will fetch and assign the pokemon data to its designated element
   function runThis(){
-  thatPokemon.display(sketchRand);
+  // thatPokemon.display(sketchRand);
   }
   setTimeout(runThis, 500);
 }
@@ -254,8 +262,12 @@ if(selectedPlayer==="neeya"){
   trainerImage.src = mikiasTrainerImage;
 }else if(selectedPlayer==="carlos"){
   trainerImage.src = carlosTrainerImage;
+  trainerImage.style.width = "80%";
+  trainerImage.style.height = "70%";
 }else if(selectedPlayer==="tyler"){
   trainerImage.src = tylerTrainerImage;
+  trainerImage.style.width = "70%";
+  trainerImage.style.height = "70%";
 }else if(selectedPlayer==="alfie"){
   trainerImage.src = alfiesTrainerImage;
   trainerImage.style.transform = "rotate(-20deg)";
