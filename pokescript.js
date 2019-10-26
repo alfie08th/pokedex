@@ -21,15 +21,21 @@ let mid_poke_width = mid_poke.getBoundingClientRect().width;
 let button_on_top = document.getElementsByClassName('button_on_top');
 let newWidth = "" + Number(mid_poke_width)*.7 + "px";
 
+let inb_screen = document.getElementById('inbound_screen');
+let outb_screen = document.getElementById('outbound_screen');
 
 function setSize(innerScreenSize){
   let screenSize = window.innerWidth + "px";
   hlbv[0].style.width = screenSize;
   hlpm.style.width = screenSize;
-  // button_on_top[0].style.width = innerScreenSize;
-  // button_on_top[0].style.position = "absolute";
-  // button_on_top[0].style.transform = "skewX(-10deg) translate(-50%, -50%)";
-  // button_on_top[0].style.left = "50%";
+  if(window.innerWidth<400){
+    inb_screen.style.display = "none";
+    outb_screen.style.display = "block";
+    alert('stop!');
+  }else{
+    inb_screen.style.display = "block";
+    outb_screen.style.display = "none";
+  }
   console.log('hello');
 }
 

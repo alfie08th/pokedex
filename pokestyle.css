@@ -13,10 +13,6 @@ url('blender_pro_medium.otf');
 }
 
 body {
-  /* background: url('bac.jpg') no-repeat center center fixed; */
-
-   /**#161616;**/
-  background: red;
   font-family: myFancyFont;
 }
 
@@ -68,23 +64,20 @@ body {
 .my_logo{
   width: 30px;
   height: 30px;
-  margin-top: 20px;
+  margin: 5% 0 5% 0;
   text-align: center;
   justify-content: center;
   transition: .5s;
-  /*animation: falldown 30s infinite linear;*/
-}
-
-#home-anch-span{
-  width:100px;
-  background: red;
-  height: 40px;
+  animation: falldown 30s infinite linear;
 }
 
 #home-anch{
-  height: auto;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  margin: auto;
+  background: red;
+  /*font-size: 50%;*/
   text-decoration: none;
 }
 
@@ -429,6 +422,14 @@ h1.head_one{
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
 }
 
+#outbound_screen{
+  display: block;
+  width: 100%;
+  font-size: 80%;
+  position: absolute;
+  top: 50%;
+  transform: translate(50%, -50%);
+}
 @media screen and (max-width: 414px){
 
   .inner_div{
@@ -445,5 +446,9 @@ h1.head_one{
 
   .here_lies_the_nav{
     height:60px;
+  }
+
+  #home-anch{
+    font-size: 50%;
   }
 }
