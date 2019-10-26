@@ -22,19 +22,23 @@ let button_on_top = document.getElementsByClassName('button_on_top');
 let newWidth = "" + Number(mid_poke_width)*.7 + "px";
 
 
-
-function setSize(){
+function setSize(innerScreenSize){
   let screenSize = window.innerWidth + "px";
   hlbv[0].style.width = screenSize;
   hlpm.style.width = screenSize;
-  button_on_top[0].style.width = newWidth;
-  button_on_top[0].style.width = newWidth;
+  // button_on_top[0].style.width = innerScreenSize;
+  // button_on_top[0].style.position = "absolute";
+  // button_on_top[0].style.transform = "skewX(-10deg) translate(-50%, -50%)";
+  // button_on_top[0].style.left = "50%";
+  console.log('hello');
 }
 
-setSize();
-window.addEventListener("resize", function(){
-  setSize();
+window.onload = ()=>{
+setSize(newWidth);
+}
 
+window.addEventListener("resize", function(){
+  window.location.reload(true);
 })
 
 bv.style.width = "100%";

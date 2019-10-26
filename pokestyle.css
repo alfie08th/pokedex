@@ -28,16 +28,17 @@ body {
   background-color:#020006;
   position:fixed;
   overflow: hidden;
+  transform: translate(-50%, 0);
   left: 50%;
-  margin-left: -37.5%;  
+  /*padding: 35px 15px 15px 15px;*/
   font-family: myFancyFont;
 }
 .here_lies_the_nav a {
   float: right;
   color:gray;
-  padding: 35px 15px 15px 15px;
+  font-size: 80%;
+  /*padding: 35px 15px 15px 15px;*/
   text-decoration: none;
-  font-size: 17px;
 }
 .here_lies_the_nav a:hover{
   color:#fff;
@@ -45,7 +46,9 @@ body {
 
 .left_nav{
   width:33.33%;
+  height:100%;
   float: left;
+  background: red;
 }
 .left_nav a{
   float: left;
@@ -55,7 +58,10 @@ body {
 
 .middle_nav{
   width:33.33%;
+  height:100%;
   float:left;
+  /*display: inline;*/
+  background: green;
   text-align: center;
 }
 
@@ -66,13 +72,22 @@ body {
   text-align: center;
   justify-content: center;
   transition: .5s;
-  animation: falldown 30s infinite linear;
+  /*animation: falldown 30s infinite linear;*/
+}
+
+#home-anch-span{
+  width:100px;
+  background: red;
+  height: 40px;
 }
 
 #home-anch{
-color: white;
-text-decoration: none;
+  height: auto;
+  color: white;
+  margin: auto;
+  text-decoration: none;
 }
+
 @keyframes falldown{
   100%{
     transform: rotate(360deg);
@@ -89,6 +104,8 @@ h1.head_one{
 
 .right_nav{
   width:33.33%;
+  height:100%;
+  background: pink;
   float:right;
 }
 
@@ -192,6 +209,7 @@ h1.head_one{
   background-color: lightgreen; 
   animation: hovered 5s linear;
 }
+
 
   
   /*  styling for pokemon name*/
@@ -336,7 +354,7 @@ h1.head_one{
     border: 2px solid gray;
     transition: .2s;
     float: left;
-    margin-left:10%;
+    /*margin-left:10%;*/
     transform: scale(1);
   }
 
@@ -379,6 +397,7 @@ h1.head_one{
   }
 .button_on_top{
   /*width: 150px;*/
+  width: 16.5vw;
   height:40px;
   z-index: 1;
   background-color: #ffae1a;
@@ -386,10 +405,10 @@ h1.head_one{
   outline:none;
   font-family: monospace;
   font-size: 14px;
-  position: absolute;
+  position:absolute;
+  transform: skewX(-10deg) translate(-50%, -50%);
+  left:50%;
   text-align: center;
-  transform: skewX(-10deg) translate(-50%, -50%); 
-  left: 50%;
   margin-top:-20px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
   transition: .3s;
@@ -401,6 +420,7 @@ h1.head_one{
   transition: .3s;
 }
 
+
 .second_div{
   height: 115px;
   margin: auto;
@@ -409,41 +429,21 @@ h1.head_one{
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
 }
 
-/* iPhone 5SE */
-/* @media screen and (min-width: 320px) and (max-width:359px) {
-   body{
-      width: 320px;
-      font-size: 12px;
-    }
-    .here_lies_the_nav{
-      height: 50px;
-    }
-    #here_lies_pokemon{
-      width: 100%;
-      height: 320px;
-    }
-    .left_poke{
-      width: 25%;
-      height: 200px;
-    }
-    #big_poke{
-      width: 50%;
-      height: 200px;
-    }
-    .sketchfab{
-      width:100%;
-      height:auto
-    }
-    .right_poke{
-      width: 25%;
-      height: 200px;
-    }
-    .second_div{
-      background-color: purple;
-    }
+@media screen and (max-width: 414px){
 
-    .div_on_top{
-    background-color: dodgerblue;
-    text-align: center;
-    }
- } */
+  .inner_div{
+    height: 200px;
+    background: black;
+  }
+
+  .button_on_top{
+    height: 30px;
+  }
+  #next_keyword{
+  font-size: 80%;
+  }
+
+  .here_lies_the_nav{
+    height:60px;
+  }
+}
