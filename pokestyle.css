@@ -26,6 +26,7 @@ body {
   overflow: hidden;
   transform: translate(-50%, 0);
   left: 50%;
+  border-radius: 0 0 5px 5px;
   /*padding: 35px 15px 15px 15px;*/
   font-family: myFancyFont;
 }
@@ -44,7 +45,6 @@ body {
   width:33.33%;
   height:100%;
   float: left;
-  background: red;
 }
 .left_nav a{
   float: left;
@@ -56,8 +56,6 @@ body {
   width:33.33%;
   height:100%;
   float:left;
-  /*display: inline;*/
-  background: green;
   text-align: center;
 }
 
@@ -76,7 +74,6 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  background: red;
   /*font-size: 50%;*/
   text-decoration: none;
 }
@@ -98,7 +95,6 @@ h1.head_one{
 .right_nav{
   width:33.33%;
   height:100%;
-  background: pink;
   float:right;
 }
 
@@ -154,8 +150,9 @@ h1.head_one{
   }
 
 #left_image{
-    width:100%;
+    width:80%;
     transition: 0.5s;
+    left: 50%;
     opacity:1;
     padding-top: 15%;
     animation: slideInLeft 1s linear;
@@ -211,7 +208,7 @@ h1.head_one{
     font-weight: bold;
     letter-spacing:2px;
     text-align: center;
-    font-size: 56px;
+    font-size: 350%;
     margin: 20% 0 15% 0;
 
     text-shadow: 2px 2px #fff;
@@ -258,15 +255,6 @@ h1.head_one{
   color: white;
   background-color: rgba(0,26,51,1);
 }
-  #right_para{
-    padding:10px;
-    margin: 50px;
-    text-align: center;
-    font-family: myFancyFont;
-    color: #fff;
-    border-radius:15px;
-    background-color: rgba(0,0,0,0.5);
-  }
   .upper_style, .lower_style{
     width: 100%;
     height: 40%;
@@ -321,8 +309,12 @@ h1.head_one{
     color: #3ac2ff;
   }
   #lower_style_heading{
+    /*font-size: 150%;*/
     margin: 0px 0px 5px 20px;
     color: #3ac2ff;
+  }
+  #head_left, #head_right, #attack_attribute, #lower_style_heading{
+    font-size: 150%;
   }
 
   @keyframes heartbeat {
@@ -424,14 +416,24 @@ h1.head_one{
 
 #outbound_screen{
   display: block;
-  width: 100%;
-  font-size: 80%;
+  font-size: 60%;
   position: absolute;
   top: 50%;
-  transform: translate(50%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#the_head{
+  background: red;
+  color: white;
+  text-align: center;
 }
 @media screen and (max-width: 414px){
 
+
+  #head_left, #head_right, #attack_attribute, #lower_style_heading{
+    font-size: 50%;
+  }
   .inner_div{
     height: 200px;
     background: black;
@@ -450,5 +452,12 @@ h1.head_one{
 
   #home-anch{
     font-size: 50%;
+  }
+
+  #player_name{
+    font-size: 150% !important;
+  }
+  #pokemon_name{
+    font-size: 150%;
   }
 }
