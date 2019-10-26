@@ -15,14 +15,35 @@ let secdiv = document.getElementsByClassName('second_div');
 
 let bv = document.getElementById('back_video');
 
-window.addEventListener("resize", function(){
+let mid_poke = document.getElementById('middle_poke');
+let mid_poke_width = mid_poke.getBoundingClientRect().width;
+
+let button_on_top = document.getElementsByClassName('button_on_top');
+let newWidth = "" + Number(mid_poke_width)*.7 + "px";
+
+
+
+function setSize(){
   let screenSize = window.innerWidth + "px";
   hlbv[0].style.width = screenSize;
   hlpm.style.width = screenSize;
+  button_on_top[0].style.width = newWidth;
+  button_on_top[0].style.width = newWidth;
+}
+
+setSize();
+window.addEventListener("resize", function(){
+  setSize();
+
 })
+
 bv.style.width = "100%";
 indiv[0].style.width = "100%";
 secdiv[0].style.width = "100%";
+
+
+
+
 
 let hp;
 let defense;
@@ -63,9 +84,9 @@ function fetchPokemonData(thaturl) {
          defense = response.data.stats[3].base_stat; //Pokemon's Defense Status
          potential = response.data.abilities; //Pokemon's Ability
          name = response.data.forms[0].name;
-         let thatPokemon = new Pokemon(name, hp, attack, defense, potential);
-         thatPokemon.display(sketchRand);
-         trainer.add(thatPokemon); // add new Pokemon, if want to add more Pokemon, In this everyone has 3 Pokemon.
+         let selectedPokemon = new Pokemon(name, hp, attack, defense, potential);
+         selectedPokemon.display(sketchRand);
+         trainer.add(selectedPokemon); // add new Pokemon, if want to add more Pokemon, In this everyone has 3 Pokemon.
          trainer.all();
 
          // console.log("fpd:\tname:\t"+name);
@@ -83,9 +104,9 @@ function fetchPokemonData(thaturl) {
 
   /** Method to display Pokemon Data **/
   let trainerImage = document.getElementById('left_image');
-  let ability_lists = ["This pokemon is so fast that you never see it coming, it just comes and that's that, and its oponent are left wondering what just happened.", "The most Abilities any species or form has is three: two normal Abilities and one Hidden Ability. In most wild Pokémon encounters, it'll be non-Hidden Abilities.", "There are three ways for Pokémon to change Abilities in a permanent manner. One way is if the Pokémon has different forms with different Abilities."];
+  let ability_lists = ["This pokemon is so fast that you never see it coming, it just comes and that's that, and its oponent are left wondering what just happened.", "The most Abilities any species or form have are three: two normal Abilities and one Hidden Ability. In most wild Pokémon encounters, it'll be non-Hidden Abilities.", "There are three ways for Pokémon to change Abilities in a permanent manner. One way is if the Pokémon has different forms with different Abilities."];
   let sketchfab = ["https://sketchfab.com/models/09326261ead84002af136fdff56f50e7/embed?autostart=1", "https://sketchfab.com/models/28b3d9b0ee5b48ca941e953cefe9bcbf/embed?autostart=1&amp;preload=1","https://sketchfab.com/models/e64604ea410b4648bbb4cd5d47b1bddc/embed?autostart=1&amp;preload=1"];
-  let thatPokemonName = document.getElementById('pokemon_name');
+  let selectedPokemonName = document.getElementById('pokemon_name');
   let ability_description = document.getElementById('ability_summary');
   let ability_button_one = document.getElementById('ability_one');
   let ability_button_two = document.getElementById('ability_two');
@@ -110,23 +131,27 @@ class Pokemon{
       let displayAttack = document.getElementById('attack_icon');
       let displayDefense = document.getElementById('role_icon');
       let displayAbility = document.getElementById('pokemon_ability');
-      // let resultInside = [result[0], result[1], result[2]];
-      let abilitiesInside = [ability_lists[0], ability_lists[1], ability_lists[2]];
 
       //console.log("display:\tpotential:\t"+potential.showValue);
       for(var i = 0; i<potential.length; i++){
         result[i] = potential[i].ability.name;
-        // console.log(i+"\t"+result[i]);
+        console.log('inside loop', result[i]);
       }
-
         /** Animation 'hover' Starts here
         From here im creating a animation where when user hover over and click on a option, info about that shows up**/
       ability_button_one.addEventListener('click', function(){
+        console.log('when clicked', result[0]);
+        setTimeout(()=>{
+        displayAbility.style.animation = "scaleAnimation 2s 2";
+      }, 500);
+
         if(typeof result[0]==='undefined'){
           displayAbility.innerHTML = "Anonymous";
+          ability_description.innerHTML = "Mystery";
         }else{
         displayAbility.innerHTML = result[0];
-        ability_description.innerHTML = abilitiesInside[0];
+        let abilities_index = Math.floor(Math.random()*2)+1;
+        ability_description.innerHTML = ability_lists[abilities_index];
       }
       });
       ability_button_two.addEventListener('click', function(){
@@ -147,8 +172,8 @@ class Pokemon{
       });
 
       //give value on first line, and assign keyframe/animation on the second line
-      thatPokemonName.innerHTML = this.name;
-      // thatPokemonName.style.animation="heartbeat .5s linear";
+      selectedPokemonName.innerHTML = this.name;
+      // selectedPokemonName.style.animation="heartbeat .5s linear";
 
       displayAttack.innerHTML = this.attackStat;
       // displayAttack.style.animation="heartbeat .5s linear";
@@ -250,7 +275,7 @@ window.load = showTrainerData(selectedPlayer);
 function gotoNextPokemon(){
   trainer.get();// here the method will fetch and assign the pokemon data to its designated element
   function runThis(){
-  // thatPokemon.display(sketchRand);
+  // selectedPokemon.display(sketchRand);
   }
   setTimeout(runThis, 500);
 }
