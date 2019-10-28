@@ -197,7 +197,7 @@ background-color: pink;
 
 .neeya_image:hover, .carlos_image:hover, .tyler_image:hover, .alfie_image:hover, .mikias_image:hover{
   transition: .5s;
-  transform: scale(1.5);
+  transform: scale(1.2);
   background-color: dodgerblue;
 }
 
