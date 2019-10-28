@@ -476,6 +476,10 @@ h1.head_one{
   #left_image{
     width:60%;
   }
+ 
+  #ability_icon{
+    width: 40%;
+  }
 
 }
 
