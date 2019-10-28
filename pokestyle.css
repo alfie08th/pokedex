@@ -260,61 +260,67 @@ h1.head_one{
     height: 40%;
   }
 
+  #first_attribute{
+    width: 100%;
+    height: 40%;
+    background: green;
+  }
+
   #upper_heading{
     width: 100%;
     height:20%;
     color: #3ac2ff;
   }
+    #head_left{
+      width:40%;
+      float:left;
+      text-align: center;
+    }
+    #head_right{
+      width:40%;
+      float:right;
+      text-align: center;
+    }
+
   #lower_icon{
     width:100%;
     height:20%;
     transition: .5s;
   }
-  #head_left{
-    width:40%;
-    height:35px;
-    float:left;
-    padding: 20px 0px 0px 20px;
-  }
+  
   #role_icon{
     width:40%;
     height:25px;
     float:left;
-    padding: 5px 0px 0px 20px;
+    text-align: center;
     transition: .5s;
-  }
-  #head_right{
-    width:40%;
-    height:35px;
-    float:right;
-    padding: 20px 20px 0px 0px;
-    text-align: right;
   }
   #health_icon{
     width:40%;
     height:25px;
     float:right;
-    text-align: right;
-    padding: 5px 40px 0px 0px;
+    text-align: center;
     transition: .5s;
   }
+  
+
   #second_attribute{
-    width: 100%;
-    height:70%;
+    width:50%;
     margin: auto;
     text-align: center;
   }
   #attack_attribute{
-    margin: 0px 0px 10px 0px;
     color: #3ac2ff;
   }
   #lower_style_heading{
-    /*font-size: 150%;*/
     margin: 0px 0px 5px 20px;
     color: #3ac2ff;
   }
   #head_left, #head_right, #attack_attribute, #lower_style_heading{
     font-size: 150%;
+  }
+  #health_icon, #role_icon, #attack_icon{
+    font-size: 120%;
   }
 
   @keyframes heartbeat {
@@ -432,6 +438,9 @@ h1.head_one{
 
 
   #head_left, #head_right, #attack_attribute, #lower_style_heading{
+    font-size: 50%;
+  }
+  #health_icon, #role_icon, #attack_icon{
     font-size: 50%;
   }
   .inner_div{

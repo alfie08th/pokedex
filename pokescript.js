@@ -119,23 +119,7 @@ if(selectedPlayer==="neeya"){
   trainerImage.style.transform = "rotate(-20deg)";
 }
 
-function setAnimation(shrink){
-  selectedPokemonName.innerHTML = this.name;
-  selectedPokemonName.style.transform = "scale(shrink)";
-  selectedPokemonName.style.transition = ".5s";
 
-  displayAttack.innerHTML = this.attackStat;
-  displayAttack.style.transform = "scale(shrink)";
-  displayAttack.style.transition = ".5s";
-
-  displayDefense.innerHTML = this.defenseStat;
-  displayDefense.style.transform = "scale(shrink)";
-  displayDefense.style.transition = ".5s";
-
-  displayHP.innerHTML = this.hpStat;
-  displayHP.style.transform = "scale(shrink)";
-  displayHP.style.transition = ".5s";
-}
 
 //This Class is to Modify Pokemon Object when its method(s) is also called
 class Pokemon{
@@ -151,8 +135,24 @@ class Pokemon{
   }
   /** Creating the function to display data about the pokemon**/
   display(sketchUrl) {
-      
+      let setAnimation = (shrink)=>{
+        selectedPokemonName.innerHTML = this.name;
+        selectedPokemonName.style.transform = "scale(shrink)";
+        selectedPokemonName.style.transition = ".5s";
 
+        displayAttack.innerHTML = this.attackStat;
+        displayAttack.style.transform = "scale(shrink)";
+        displayAttack.style.transition = ".5s";
+
+        displayDefense.innerHTML = this.defenseStat;
+        displayDefense.style.transform = "scale(shrink)";
+        displayDefense.style.transition = ".5s";
+
+        displayHP.innerHTML = this.hpStat;
+        displayHP.style.transform = "scale(shrink)";
+        displayHP.style.transition = ".5s";
+      }
+      setAnimation(1);
       //assigning Pokemon Image To The Trainer
       if(selectedPlayer==='neeya'){
        pokeballSketch.src = neeyaPokeImage[rand];
