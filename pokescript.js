@@ -178,7 +178,7 @@ class Pokemon{
         From here im creating a animation where when user hover over and click on a option, info about that shows up**/
       ability_button_one.addEventListener('click', function(){
         setTimeout(()=>{
-          displayAbility.style.animation = "scaleAnimation 2s 2";
+          // displayAbility.style.animation = "scaleAnimation 2s 2";
         }, 500);
 
         if(typeof result[0]==='undefined'){
@@ -194,18 +194,20 @@ class Pokemon{
       ability_button_two.addEventListener('click', function(){
         if(typeof result[1]==='undefined'){
           displayAbility.innerHTML = "Anonymous";
+          ability_description.innerHTML = "Mystery";
         }else{
           displayAbility.innerHTML = result[1];
-          ability_description.innerHTML = abilitiesInside[1];
+          ability_description.innerHTML = ability_lists[1];
         }
       });
 
       ability_button_three.addEventListener('click', function(){
         if(typeof result[2]==='undefined'){
           displayAbility.innerHTML = "Anonymous";
+          ability_description.innerHTML = "Mystery";
         }else{
           displayAbility.innerHTML = result[2];
-          ability_description.innerHTML = abilitiesInside[2];
+          ability_description.innerHTML = ability_lists[2];
         }
       });
 

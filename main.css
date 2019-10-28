@@ -18,23 +18,26 @@ font-family: myFancyFont;
 src: url('blender_pro_medium.otf'),
 url('blender_pro_medium.otf');
 }
+
+
 .here_lies_the_nav{
   width: 75%;
   height: 90px;
   background-color:#020006;
   position:fixed;
   overflow: hidden;
+  top: 0;
   left: 50%;
-  top:0;
-  margin-left: -37.5%;  
+  transform: translate(-50%, 0);
+  border-radius: 0 0 5px 5px;
   font-family: myFancyFont;
 }
 .here_lies_the_nav a {
   float: right;
   color:gray;
-  padding: 35px 15px 15px 15px;
+  font-size: 80%;
+  /*padding: 35px 15px 15px 15px;*/
   text-decoration: none;
-  font-size: 17px;
 }
 .here_lies_the_nav a:hover{
   color:#fff;
@@ -42,6 +45,7 @@ url('blender_pro_medium.otf');
 
 .left_nav{
   width:33.33%;
+  height:100%;
   float: left;
 }
 .left_nav a{
@@ -52,6 +56,7 @@ url('blender_pro_medium.otf');
 
 .middle_nav{
   width:33.33%;
+  height:100%;
   float:left;
   text-align: center;
 }
@@ -59,12 +64,31 @@ url('blender_pro_medium.otf');
 .my_logo{
   width: 30px;
   height: 30px;
-  margin-top: 20px;
-  text-align: center;
-  justify-content: center;
-  transition: .5s;
-  animation: falldown 30s infinite linear;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
+
+#logo_image{
+  padding-top: 25%;
+  width: 100%;
+  height: 100%;
+}
+
+
+#home-anch{
+  padding-top: 5%;
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-decoration: none;
+}
+
+
+
+
 @keyframes falldown{
   100%{
     transform: rotate(360deg);
@@ -128,6 +152,17 @@ height: 150px;
 width: 100px;
 margin: 25px;
 display: inline-block; border-radius:5px;
+}
+
+.player_initial{
+  color: white;
+  font-family: myFancyFont;
+  vertical-align: middle;
+  background: black;
+  margin-top:10%;
+  font-size: 300%;
+  font-family: bold;
+
 }
 
 .carlos_image{
