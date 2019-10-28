@@ -151,7 +151,7 @@ h1.head_one{
     height:100%;
     margin:auto;
     float: left;
-    /*background-color: rgba(230,23,0, 0.5); */
+    background-color: rgba(230,23,0, 0.8); 
   }
 
 #left_image{
@@ -168,8 +168,9 @@ h1.head_one{
       margin-left: -300px;
     }
     100%{
+          /*margin: auto;*/
+          margin-left:0px;
           opacity:1;
-          margin-left:-50px;
         }
   }
   #player_name{
@@ -198,8 +199,8 @@ h1.head_one{
   height:100%;
   margin:auto;
   float: left;
+  background: white;
   transition: 0.5s;
-  border-radius: 15px;
   animation: hovered 5s linear;
 }
 
@@ -251,7 +252,6 @@ h1.head_one{
   height:100%;
   margin:auto;
   float: left;
-  border-radius: 5px;
   color: white;
   background-color: rgba(0,26,51,1);
 }
@@ -263,6 +263,7 @@ h1.head_one{
   #first_attribute{
     width: 100%;
     height: 40%;
+    margin-top: 10%;
   }
 
   #upper_heading{
@@ -432,7 +433,8 @@ h1.head_one{
 .second_div{
   height: 20%;
   margin: auto;
-  background-color: #FDFDFD;
+  /*background-color: #FDFDFD;*/
+  background-color: #edeff2;
   animation: fadeBody 2s linear;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
 }
@@ -520,6 +522,7 @@ h1.head_one{
     font-size: 150% !important;
   }
   #pokemon_name{
+    margin: 10% 0 15% 0;
     font-size: 150%;
   }
 
@@ -541,7 +544,7 @@ h1.head_one{
   }
   #big_love_icon, #feedback_icon{
     vertical-align: top;
-    width:20%;
+    width:15%;
     /*height: 80%;*/
   }
 

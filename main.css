@@ -114,7 +114,7 @@ h1.head_one{
 
 .players{
   width: 100%;
-  height:100px;
+  height: 200px;
   text-align: center;
   position: relative;
 }
@@ -159,68 +159,51 @@ display: inline-block; border-radius:5px;
   font-family: myFancyFont;
   vertical-align: middle;
   background: black;
-  margin-top:10%;
+  margin-top:20%;
   font-size: 300%;
-  font-family: bold;
+  font-weight: bold; 
 
+}
+
+.neeya_image, .carlos_image, .tyler_image, .alfie_image, .mikias_image{
+  height: 100px;
+  width: 100px;
+  transition: .5s;
+  display: inline-block; border-radius:5px;
+  box-shadow: 5px 5px #00000099;
 }
 
 .carlos_image{
 background-color: lightblue;
-height: 100px;
-width: 100px;
-display: inline-block; border-radius:5px;
-box-shadow: 5px 5px #00000099;
 }
 
 .mikias_image{
 background-color: red;
-height: 100px;
-width: 100px;
-display: inline-block; border-radius:5px;
-box-shadow: 5px 5px #00000099;
 
 }
 
 .tyler_image{
 background-color: lightgreen;
-height: 100px;
-width: 100px;
-display: inline-block; border-radius:5px;
-box-shadow: 5px 5px #00000099;
 }
 
 .alfie_image{
 background-color: gold;
-height: 100px;
-width: 100px;
-display: inline-block; border-radius:5px;
-box-shadow: 5px 5px #00000099;
 }
 
 .neeya_image{
 background-color: pink;
-height: 100px;
-width: 100px;
-display: inline-block; border-radius:5px;
-box-shadow: 5px 5px #00000099;
 }
+
+
 .neeya_image:hover, .carlos_image:hover, .tyler_image:hover, .alfie_image:hover, .mikias_image:hover{
   transition: .5s;
-  width:110px;
-  height: 110px;
+  transform: scale(1.5);
   background-color: dodgerblue;
 }
+
 .name_alfie, .name_neeya, .name_tyler, .name_carlos, .name_mikias{
   margin-top: 15px;
   font-family: Roboto;
 }
-/* .player_name{
-  width: 100%;
-  height:100px;
-  text-align: center;
-}
 
-.mikias_name, .neeya_name, .carlos_name, .tyler_name, .alfie_name{
-  display: inline-block; border-radius:5px;
-} */
+
