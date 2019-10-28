@@ -25,8 +25,8 @@ let inb_screen = document.getElementById('inbound_screen');
 let outb_screen = document.getElementById('outbound_screen');
 
 function setSize(innerScreenSize){
-  let screenSize = window.innerWidth + "px";
-  hlbv[0].style.width = screenSize;
+  let screenSize = Number(window.innerWidth)*0.9 + "px";
+  hlbv[0].style.width = window.innerWidth + "px";
   hlpm.style.width = screenSize;
   if(window.innerWidth<300){
     inb_screen.style.display = "none";

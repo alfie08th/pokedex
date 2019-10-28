@@ -19,7 +19,7 @@ body {
 /* nav style begins here */
 
 .here_lies_the_nav{
-  width: 75%;
+  width: 80%;
   height: 90px;
   background-color:#020006;
   position:fixed;
@@ -27,14 +27,12 @@ body {
   transform: translate(-50%, 0);
   left: 50%;
   border-radius: 0 0 5px 5px;
-  /*padding: 35px 15px 15px 15px;*/
   font-family: myFancyFont;
 }
 .here_lies_the_nav a {
   float: right;
   color:gray;
   font-size: 80%;
-  /*padding: 35px 15px 15px 15px;*/
   text-decoration: none;
 }
 .here_lies_the_nav a:hover{
@@ -125,8 +123,9 @@ h1.head_one{
 /* pokemon content styling starts here */
 
 #here_lies_pokemon{
-    height:610px;
+    height: 80vh;
     margin: auto;
+    margin-top:-5px;
     transition: .5s;
     background-color:dodgerblue;
 }
@@ -152,7 +151,7 @@ h1.head_one{
     height:100%;
     margin:auto;
     float: left;
-    background-color: rgba(230,23,0, 0.5); 
+    /*background-color: rgba(230,23,0, 0.5); */
   }
 
 #left_image{
@@ -162,7 +161,6 @@ h1.head_one{
     opacity:1;
     padding-top: 15%;
     animation: slideInLeft 1s linear;
-    /*margin-bottom:-20px;*/
   }
   @keyframes slideInLeft {
     0%{
@@ -202,7 +200,6 @@ h1.head_one{
   float: left;
   transition: 0.5s;
   border-radius: 15px;
-  background-color: lightgreen; 
   animation: hovered 5s linear;
 }
 
@@ -228,10 +225,7 @@ h1.head_one{
     border: 0px;
   }
   /* 3d animation */
-  #poke_image{
   
-  }
-
   @keyframes rotateGlow {
     0%{
       transform: rotate(0);
@@ -321,7 +315,7 @@ h1.head_one{
     color: #3ac2ff;
   }
   #head_left, #head_right, #attack_attribute, #lower_style_heading{
-    font-size: 150%;
+    font-size: 120%;
   }
   #health_icon, #role_icon, #attack_icon{
     font-size: 120%;
@@ -336,7 +330,7 @@ h1.head_one{
 
 
   #ability_icon{
-    width: 40%;
+    width: 60%;
     height: 30%;
     margin: auto;
     text-align: center;
@@ -388,7 +382,13 @@ h1.head_one{
 
   #ability_summary{
     transition: .5s;
+    font-size: 80%;
+    height:100%;
+    text-overflow: ellipsis;
+    white-space: pre;
+    overflow: hidden;
   }
+
   @keyframes comeSlow {
     0%{
       opacity: 0;
@@ -397,6 +397,8 @@ h1.head_one{
       opacity: 1;
     }
   }
+
+
 .button_on_top{
   /*width: 150px;*/
   width: 16.5vw;
@@ -411,7 +413,7 @@ h1.head_one{
   transform: skewX(-10deg) translate(-50%, -50%);
   left:50%;
   text-align: center;
-  margin-top:-20px;
+  margin-top:0px;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
   transition: .3s;
   animation: fadeBody 2s linear;
@@ -421,10 +423,14 @@ h1.head_one{
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.5);
   transition: .3s;
 }
+ #next_keyword{
+    color: white !important;px;
+    text-shadow: 1px 1px rgba(0,0,0,0.6);
+  }
 
 
 .second_div{
-  height: 115px;
+  height: 20%;
   margin: auto;
   background-color: #FDFDFD;
   animation: fadeBody 2s linear;
@@ -446,39 +452,48 @@ h1.head_one{
   text-align: center;
 }
 
-
-@media screen and (max-width: 1060px){
-   #ability_one, #ability_two, #ability_three{
-    width:30%;
-    height: 80%;
-  }
+#big_love_icon, #feedback_icon{
+  width:24px;
+  height:auto;
+  margin:15px;
 }
 
-@media screen and (max-width: 800px){
-    .inner_div{
-      height: 300px;
-    }
+#love_icon{
+  width:18px;
+  height:auto;
+  margin-left:15px;
+  margin-right:5px;
+}
+
+#user{
+  color: rgba(0,0,0,0.7);
+}
+
+@media screen and (min-width: 1200px){
+  #left_image{
+    width:60%;
+  }
+
 }
 
 @media screen and (max-width: 414px) and (max-width: 800px){
 
 
   #head_left, #head_right, #attack_attribute, #lower_style_heading{
-    font-size: 50%;
+    font-size: 20%;
   }
   #health_icon, #role_icon, #attack_icon{
     font-size: 50%;
   }
   .inner_div{
-    height: 180px;
-    background: black;
+    height: 150px;
   }
 
   .button_on_top{
     height: 30px;
   }
   #next_keyword{
-  font-size: 80%;
+    font-size: 80%;
   }
 
   .here_lies_the_nav{
@@ -492,6 +507,12 @@ h1.head_one{
 
   #home-anch{
     font-size: 50%;
+  }
+
+
+  #poke_image{
+    width: 50px;
+    height: 50px;
   }
 
   #player_name{
@@ -512,6 +533,25 @@ h1.head_one{
   #ability_summary{
     font-size: 6px;
     /*font-size: 2px;*/
+  }
+  .one, .two{
+    width: 40%;
+    height: 35%;
+  }
+  #big_love_icon, #feedback_icon{
+    vertical-align: top;
+    width:20%;
+    /*height: 80%;*/
+  }
+
+  #love_icon{
+    margin-top:15%;
+    width:10%;
+    /*margin-right:5px;*/
+  } 
+
+  #like_amount, #user, #user_comment, #hashtagged{
+    font-size: 60% !important;
   }
 
 }
