@@ -439,6 +439,7 @@ h1.head_one{
 
 #outbound_screen{
   display: block;
+  opacity: 0;
   font-size: 60%;
   position: absolute;
   top: 50%;

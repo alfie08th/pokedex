@@ -28,19 +28,21 @@ function setSize(innerScreenSize){
   let screenSize = Number(window.innerWidth)*0.9 + "px";
   hlbv[0].style.width = window.innerWidth + "px";
   hlpm.style.width = screenSize;
-  if(window.innerWidth<300){
-    inb_screen.style.display = "none";
-    outb_screen.style.display = "block";
-    // alert('stop!');
-  }else{
-    inb_screen.style.display = "block";
-    outb_screen.style.display = "none";
-  }
   console.log('hello');
 }
 
 window.onload = ()=>{
 setSize(newWidth);
+ if(window.innerWidth<300){
+    inb_screen.style.display = "none";
+      outb_screen.style.opacity = "1";
+    setTimeout(()=>{
+      outb_screen.style.display = "block";
+    }, 500);
+  }else{
+    inb_screen.style.display = "block";
+    outb_screen.style.display = "none";
+  }
 }
 
 window.addEventListener("resize", function(){
