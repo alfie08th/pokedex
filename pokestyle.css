@@ -366,8 +366,9 @@ h1.head_one{
   }
 
   #pokemon_ability{
-    background: green;
-    padding-left: 30%;
+    background: rgba(255, 0, 0, 0.7);
+    margin: 5% 0 5% 0;
+    text-align: center;
   }
 
    @keyframes scaleAnimation {
