@@ -428,6 +428,7 @@ h1.head_one{
  #next_keyword{
     color: rgba(0,0,0,0.6)!important;px;
     text-shadow: 1px 1px white;
+   font-size:100%;
   }
 
 
@@ -500,10 +501,7 @@ h1.head_one{
   .button_on_top{
     height: 30px;
   }
-  #next_keyword{
-    font-size: 100%;
-  }
-
+ 
   .here_lies_the_nav{
     height:60px;
   }
