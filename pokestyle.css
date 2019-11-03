@@ -426,8 +426,8 @@ h1.head_one{
   transition: .3s;
 }
  #next_keyword{
-    color: white !important;px;
-    text-shadow: 1px 1px rgba(0,0,0,0.6);
+    color: rgba(0,0,0,0.6)!important;px;
+    text-shadow: 1px 1px white;
   }
 
 
